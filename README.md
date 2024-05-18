@@ -1,1 +1,1 @@
-# fooyin - A customsiable music player
+# fooyin - A customisable music player
