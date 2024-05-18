@@ -1,2 +1,1 @@
-# fooyin.org
-The fooyin.org website
+# fooyin - A customsiable music player
