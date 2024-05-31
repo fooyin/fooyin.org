@@ -1,2 +1,8 @@
-include:
-  - .well-known
+include: [ .well-known ]
+exclude: [ "README.md" ]
+permalink: pretty
+
+title: fooyin
+email: luket1@proton.me
+description: A customisable music player
+url: "https://www.fooyin.org"
