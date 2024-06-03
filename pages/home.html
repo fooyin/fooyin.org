@@ -3,4 +3,65 @@ permalink: /
 layout: default
 ---
 
-<h1>fooyin - A customisable music player</h1>
+{% include header.html %}
+
+<style>
+    header {
+        box-shadow: none;
+        margin-bottom: -60px;
+        background-color: hsla(210, 9%, 60%, 0.15);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+    }
+
+    .home-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(ellipse closest-side at 50% 45%, hsl(201.6, 45.1%, 60%), hsl(201.6, 45.1%, 70%), hsl(201.6, 45.1%, 90%));
+        padding-top: 50px;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        header {
+            background-color: hsla(210, 9%, 56%, 0.15);
+        }
+
+        .home-main {
+            background: radial-gradient(ellipse closest-side at 50% 45%, hsl(201.6, 45.1%, 40%), hsl(201.6, 45.1%, 30%), hsl(201.6, 45.1%, 10%));
+        }
+    }
+
+    .home-main h2 {
+        font-size: 35px;
+        margin: 36px 50px 8px;
+        text-align: center;
+    }
+
+    .main-img {
+        margin: 10px 0 40px 0;
+    }
+
+    .home-img {
+        max-height: 600px;
+    }
+
+    input#toggle-nav:checked~header {
+        background-color: var(--navbar-background-color);
+    }
+</style>
+
+<div class="home-main">
+    <h2>A customisable music player</h2>
+    <div class="main-img">
+        <picture>
+            <source srcset="/assets/images/simple-dark.png" media="(prefers-color-scheme: dark)" />
+            <img class="img home-img" src="/assets/images/simple.png" alt="Screenshot of simple layout" />
+        </picture>
+    </div>
+</div>
+
+{% include footer.html %}

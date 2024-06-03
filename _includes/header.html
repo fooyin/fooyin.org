@@ -1,0 +1,25 @@
+<input type="checkbox" id="toggle-nav">
+<header>
+    <div class="container flex align-center">
+        <div id="nav-container">
+            <a href="/" id="logo">
+                <img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="fooyin">
+                <img class="nav-logo dark-logo" src="/assets/logo-dark.svg" width="136" height="48" alt="fooyin">
+            </a>
+            <label for="toggle-nav" id="toggle-nav-btn">
+                <img src="/assets/icons/menu.svg" width="24" height="24" alt="Main menu">
+            </label>
+        </div>
+
+        <nav id="nav">
+            <ul>
+                {% for item in site.data.navigation %}
+                <li {% if item.link==page.url %}class="active" {% endif %}><a href="{{ item.link }}">{{ item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>

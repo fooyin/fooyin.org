@@ -1,5 +1,5 @@
-include: [ .well-known ]
-exclude: [ "README.md" ]
+include: [.well-known]
+exclude: ["README.md"]
 permalink: pretty
 
 title: fooyin
