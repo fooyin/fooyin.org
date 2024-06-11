@@ -13,7 +13,13 @@
 
         <nav id="nav">
             <ul>
-                {% for item in site.data.navigation %}
+                {% for item in site.data.navigation-left %}
+                <li {% if item.link==page.url %}class="active" {% endif %}><a href="{{ item.link }}">{{ item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for item in site.data.navigation-right %}
                 <li {% if item.link==page.url %}class="active" {% endif %}><a href="{{ item.link }}">{{ item.name }}</a>
                 </li>
                 {% endfor %}
