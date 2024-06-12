@@ -104,7 +104,8 @@ hr {
 }
 
 .container-text h2 {
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .flex {
@@ -131,14 +132,6 @@ header > div.container {
 
 header .container {
   overflow: initial;
-}
-
-ul {
-  padding-left: 2rem;
-}
-
-ul li {
-  margin-bottom: 16px;
 }
 
 footer {

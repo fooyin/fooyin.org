@@ -15,7 +15,7 @@ layout: default
         backdrop-filter: blur(3px);
     }
 
-    .home-main {
+    .feature {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -31,22 +31,22 @@ layout: default
             background-color: hsla(210, 9%, 56%, 0.15);
         }
 
-        .home-main {
+        .feature {
             background: radial-gradient(ellipse closest-side at 50% 45%, hsl(201.6, 45.1%, 40%), hsl(201.6, 45.1%, 30%), hsl(201.6, 45.1%, 10%));
         }
     }
 
-    .home-main h2 {
+    .feature h2 {
         font-size: 35px;
         margin: 36px 50px 8px;
         text-align: center;
     }
 
-    .main-img {
+    .feature-container {
         margin: 10px 0 40px 0;
     }
 
-    .home-img {
+    .feature-img {
         max-height: 600px;
     }
 
@@ -55,14 +55,40 @@ layout: default
     }
 </style>
 
-<div class="home-main">
+<div class="feature">
     <h2>A customisable music player</h2>
-    <div class="main-img">
+    <div class="feature-container">
         <picture>
             <source srcset="/assets/images/simple-dark.webp" media="(prefers-color-scheme: dark)" />
-            <img class="img home-img" src="/assets/images/simple.webp" alt="Screenshot of simple layout" />
+            <img class="img feature-img" src="/assets/images/simple.webp" alt="Screenshot of simple layout" />
         </picture>
     </div>
+</div>
+
+<div class="container-text">
+    <h2 class="title">About</h2>
+    <p>fooyin is a music player built around customisation. It offers a growing list of widgets to manage and play your
+        local music collection. It's extensible using a plugin system and many widgets make use of FooScript to offer an
+        even deeper level of control.</p>
+    <p>A layout editing mode enables the entire user interface to be customised, starting from a blank slate or a
+        preset layout.</p>
+    <p>Only Linux is supported at present, though support for other platforms is coming soon.</p>
+    <h2 class="title">Features</h2>
+    <ul>
+        <li>Playback of: FLAC, MP3, MP4, Vorbis, Opus, WavPack, WAV, AIFF, Musepack, Monkey's Audio</li>
+        <li>Gapless playback</li>
+        <li>Audio output and device configuration</li>
+        <li>CUE sheet support (including embedded)</li>
+        <li>Fully customisable layout, starting from a blank window</li>
+        <li>Customisable keyboard shortcuts</li>
+        <li>Filter library on any field(s)</li>
+        <li>Create and manage playlists</li>
+        <li>Extensible using a plugin system</li>
+        <li>Tag editor</li>
+        <li>Directory browser, with support for direct playback</li>
+        <li>Waveform seekbar</li>
+        <li>MPRIS support</li>
+    </ul>
 </div>
 
 {% include footer.html %}
