@@ -5,6 +5,9 @@
   --base-color-text: hsl(0, 0%, 2.7%);
   --base-color-text-title: hsl(0, 0%, 2.7%);
 
+  --primary-color: hsl(201.6, 45.1%, 40%);
+  --primary-color-text: hsl(0, 0%, 100%, 0.9);
+
   --navbar-link-color: hsl(0, 0%, 2.7%);
   --navbar-link-active-color: hsl(201.6, 45.1%, 40%);
 
@@ -13,6 +16,8 @@
   --navbar-background-color: hsl(220, 23%, 100%);
   --footer-color: var(--base-color-text);
   --footer-background-color: var(--navbar-background-color);
+
+  --button-background-color: hsl(0, 0%, 100%);
 
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
@@ -37,6 +42,8 @@
     --navbar-background-color: hsl(210, 9.3%, 28.2%);
     --footer-color: var(--base-color-text);
     --footer-background-color: var(--navbar-background-color);
+
+    --button-background-color: hsl(210, 5%, 21%);
   }
 
   .nav-logo {
@@ -329,4 +336,32 @@ footer {
 
 .footer-container {
   flex-direction: column;
+}
+
+.btn {
+  background-color: var(--button-background-color);
+  box-shadow: var(--base-shadow);
+  font-size: 16px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.btn-download {
+  background-color: var(--navbar-background-color);
+  text-align: center;
+}
+
+.btn.btn-download > .download-title {
+  color: var(--base-color-text-title);
+  display: inline-block;
+  padding: 16px 32px;
+}
+
+.btn.btn-download > .download-hint {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  display: inline-block;
+  padding: 16px;
+  min-width: 46px;
 }
