@@ -265,7 +265,7 @@ nav a[href^="http"]:after {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   header {
     height: auto;
   }
@@ -364,4 +364,32 @@ footer {
   display: inline-block;
   padding: 16px;
   min-width: 46px;
+}
+
+.image-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.image-grid li {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.image-grid img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: var(--base-color-text);
+  text-align: center;
+  transform: translateY(calc(100%));
 }
