@@ -247,6 +247,24 @@ nav li.active > a {
   color: var(--navbar-link-active-color);
 }
 
+nav a[href^="http"]:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  background-image: url("/assets/icons/external-link.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  nav a[href^="http"]:after {
+    filter: invert(100%);
+  }
+}
+
 @media (max-width: 500px) {
   header {
     height: auto;

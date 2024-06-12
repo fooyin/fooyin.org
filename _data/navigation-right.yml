@@ -1,4 +1,5 @@
-- link: https://github.com/ludouzi/fooyin
-  name: GitHub
 - link: /support
   name: Support
+- link: https://github.com/ludouzi/fooyin
+  name: GitHub
+  external: true
