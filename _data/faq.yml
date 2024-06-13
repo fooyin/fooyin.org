@@ -1,0 +1,10 @@
+- title: "General"
+  questions:
+    - question: "Why 'fooyin'?"
+      answer:
+        "The name is based on 'foo' from foobar and the chinese 音 (yīn), meaning 'sound'.
+        It's also a play on 福音 (fúyīn), meaning 'good news'."
+    - question: "Why doesn't fooyin use my system theme?"
+      answer: "As fooyin is built using Qt6, it will follow the system Qt style. 
+      If you're using a non-Qt DE such as GNOME or Cinnamon, you will need to install something like 
+      <a href='https://github.com/trialuser02/qt6ct' target='_blank' rel='noopener noreferrer'>qt6ct</a>."
