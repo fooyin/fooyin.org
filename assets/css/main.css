@@ -402,7 +402,10 @@ footer {
 
 .image-grid li {
   position: relative;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
 }
 
 .image-grid img {
@@ -418,5 +421,4 @@ footer {
   width: 100%;
   color: var(--base-color-text);
   text-align: center;
-  transform: translateY(calc(100%));
 }
