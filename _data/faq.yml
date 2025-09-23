@@ -8,3 +8,8 @@
       answer: "As fooyin is built using Qt6, it will follow the system Qt style. 
       If you're using a non-Qt DE such as GNOME or Cinnamon, you will need to install something like 
       <a href='https://github.com/trialuser02/qt6ct' target='_blank' rel='noopener noreferrer'>qt6ct</a>."
+    - question: "Why can't fooyin read a directory or why does it fail to find a previously added directory on restart?"
+      answer: |
+        The Flatpak sandbox restricts filesystem access, so fooyin cannot freely read directories outside of its allowed scope. 
+        To resolve this, you must grant fooyin access to your music directories and any required paths using a tool such as 
+        <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>.
