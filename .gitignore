@@ -5,4 +5,5 @@ _site
 vendor
 
 .vscode/
+.idea/
 .directory
