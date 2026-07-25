@@ -5,11 +5,19 @@
         "The name is based on 'foo' from foobar and the chinese 音 (yīn), meaning 'sound'.
         It's also a play on 福音 (fúyīn), meaning 'good news'."
     - question: "Why doesn't fooyin use my system theme?"
-      answer: "As fooyin is built using Qt6, it will follow the system Qt style. 
-      If you're using a non-Qt DE such as GNOME or Cinnamon, you will need to install something like 
+      answer: "As fooyin is built using Qt6, it will follow the system Qt style.
+      If you're using a non-Qt DE such as GNOME or Cinnamon, you will need to install something like
       <a href='https://github.com/trialuser02/qt6ct' target='_blank' rel='noopener noreferrer'>qt6ct</a>."
     - question: "Why can't fooyin read a directory or why does it fail to find a previously added directory on restart?"
       answer: |
-        The Flatpak sandbox restricts filesystem access, so fooyin cannot freely read directories outside of its allowed scope. 
-        To resolve this, you must grant fooyin access to your music directories and any required paths using a tool such as 
+        The Flatpak sandbox restricts filesystem access, so fooyin cannot freely read directories outside of its allowed scope.
+        To resolve this, you must grant fooyin access to your music directories and any required paths using a tool such as
         <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>.
+    - question: "Why are the notification timeout and album art options disabled in the Flatpak?"
+      answer: |
+        The Flatpak uses the desktop notification portal by default, which does not support custom timeouts or album art.
+        To enable these options, use
+        <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>
+        to add <code>org.freedesktop.Notifications</code> to fooyin's Session Bus “talk” permissions.
+        See <a href='https://github.com/fooyin/fooyin/issues/995' target='_blank' rel='noopener noreferrer'>issue #995</a>
+        for more details.
