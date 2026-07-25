@@ -15,27 +15,26 @@
     root.dataset.theme = savedTheme;
   }
 
-  function currentTheme() {
-    if (root.dataset.theme) {
-      return root.dataset.theme;
-    }
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+  function themePreference() {
+    return root.dataset.theme || "auto";
   }
 
   function updateToggle(toggle) {
-    const nextTheme = currentTheme() === "dark" ? "light" : "dark";
-    const label = "Switch to " + nextTheme + " mode";
+    const preference = themePreference();
+    const nextTheme =
+      preference === "auto"
+        ? "light"
+        : preference === "light"
+          ? "dark"
+          : "auto";
+    const label = "Theme: " + preference + ". Switch to " + nextTheme + " mode";
 
     toggle.setAttribute("aria-label", label);
     toggle.setAttribute("title", label);
-    toggle.setAttribute("aria-pressed", currentTheme() === "dark");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var toggle = document.querySelector(".theme-toggle");
+    const toggle = document.querySelector(".theme-toggle");
 
     if (!toggle) {
       return;
@@ -44,8 +43,19 @@
     updateToggle(toggle);
 
     toggle.addEventListener("click", function () {
-      var nextTheme = currentTheme() === "dark" ? "light" : "dark";
-      root.dataset.theme = nextTheme;
+      const preference = themePreference();
+      const nextTheme =
+        preference === "auto"
+          ? "light"
+          : preference === "light"
+            ? "dark"
+            : "auto";
+
+      if (nextTheme === "auto") {
+        delete root.dataset.theme;
+      } else {
+        root.dataset.theme = nextTheme;
+      }
 
       try {
         localStorage.setItem(storageKey, nextTheme);

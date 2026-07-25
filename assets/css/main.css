@@ -90,8 +90,12 @@
 }
 
 .nav-logo.dark-logo,
-.img.feature-img-dark,
-.theme-icon-sun {
+.img.feature-img-dark {
+  display: none;
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
   display: none;
 }
 
@@ -349,27 +353,33 @@ nav li.active > a {
 }
 
 :root[data-theme="dark"] .nav-logo:not(.dark-logo),
-:root[data-theme="dark"] .feature-img-light,
-:root[data-theme="dark"] .theme-icon-moon {
+:root[data-theme="dark"] .feature-img-light {
   display: none;
 }
 
 :root[data-theme="dark"] .nav-logo.dark-logo,
-:root[data-theme="dark"] .feature-img-dark,
-:root[data-theme="dark"] .theme-icon-sun {
+:root[data-theme="dark"] .feature-img-dark {
+  display: block;
+}
+
+:root[data-theme="light"] .theme-icon-auto,
+:root[data-theme="dark"] .theme-icon-auto {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-icon-sun,
+:root[data-theme="dark"] .theme-icon-moon {
   display: block;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .nav-logo:not(.dark-logo),
-  :root:not([data-theme]) .feature-img-light,
-  :root:not([data-theme]) .theme-icon-moon {
+  :root:not([data-theme]) .feature-img-light {
     display: none;
   }
 
   :root:not([data-theme]) .nav-logo.dark-logo,
-  :root:not([data-theme]) .feature-img-dark,
-  :root:not([data-theme]) .theme-icon-sun {
+  :root:not([data-theme]) .feature-img-dark {
     display: block;
   }
 }
