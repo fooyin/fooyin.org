@@ -1,8 +1,15 @@
 include: [.well-known]
-exclude: ["README.md"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 permalink: pretty
 
 title: fooyin
-email: luket1@proton.me
+email: luket@pm.me
 description: A customisable music player
 url: "https://www.fooyin.org"
