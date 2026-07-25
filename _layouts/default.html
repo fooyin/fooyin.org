@@ -19,10 +19,11 @@
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="stylesheet" href="/assets/css/main.css?v=4">
+	<script src="/assets/js/theme.js"></script>
+	<link rel="stylesheet" href="/assets/css/main.css?v=5">
 </head>
 
-<body>
+<body{% if page.url == "/" %} class="home"{% endif %}>
 	{{ content }}
 </body>
 
