@@ -8,3 +8,7 @@ images:
     caption: "Obsidian"
   - src: "/assets/images/viewer.webp"
     caption: "Viewer"
+  - src: "/assets/images/radio.webp"
+    caption: "Radio"
+  - src: "/assets/images/custom.webp"
+    caption: "Custom layout with WhiteSur KDE theme"
