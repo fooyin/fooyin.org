@@ -1,35 +1,53 @@
-<input type="checkbox" id="toggle-nav">
+<input type="checkbox" id="toggle-nav" />
 <header>
     <div class="container flex align-center">
         <div id="nav-container">
             <a href="/" id="logo">
-                <img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="fooyin">
-                <img class="nav-logo dark-logo" src="/assets/logo-dark.svg" width="136" height="48" alt="fooyin">
+                <img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="fooyin" />
+                <img class="nav-logo dark-logo" src="/assets/logo-dark.svg" width="136" height="48" alt="fooyin" />
             </a>
             <label for="toggle-nav" id="toggle-nav-btn">
-                <img src="/assets/icons/menu.svg" width="24" height="24" alt="Main menu">
+                <img src="/assets/icons/menu.svg" width="24" height="24" alt="Main menu" />
             </label>
         </div>
 
         <nav id="nav">
             <ul>
-                {% for item in site.data.navigation-left %}
-                <li {% if item.link==page.url %}class="active" {% endif %}><a href="{{ item.link }}">{{ item.name }}</a>
+                {% for item in site.data.navigation-left %} {% if item.link == page.url %}
+                <li class="active">{% else %}</li>
+
+                <li>
+                    {% endif %}
+                    <a href="{{ item.link }}">{{ item.name }}</a>
                 </li>
                 {% endfor %}
             </ul>
             <ul>
-                {% for item in site.data.navigation-right %}
-                <li {% if item.link==page.url %}class="active" {% endif %}><a href="{{ item.link }}" {% if item.external
-                        %}class="external-link" target="_blank" rel="noopener noreferrer" {% endif %}>{{ item.name
-                        }}</a>
+                {% for item in site.data.navigation-right %} {% if item.link == page.url %}
+                <li class="active">{% else %}</li>
+
+                <li>
+                    {% endif %} {% if item.external %}
+                    <a href="{{ item.link }}" class="external-link" target="_blank" rel="noopener noreferrer"
+                        >{{ item.name }}</a
+                    >
+                    {% else %}
+                    <a href="{{ item.link }}">{{ item.name }}</a>
+                    {% endif %}
                 </li>
                 {% endfor %}
                 <li class="theme-item">
-                    <button class="theme-toggle" type="button" aria-label="Change colour theme" title="Change colour theme">
+                    <button
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Change colour theme"
+                        title="Change colour theme"
+                    >
                         <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="4"></circle>
-                            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path>
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"
+                            ></path>
                         </svg>
                         <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
                             <path d="M20.5 14.1A8 8 0 0 1 9.9 3.5 8.5 8.5 0 1 0 20.5 14.1Z"></path>
@@ -45,4 +63,4 @@
     </div>
 </header>
 
-<main>
+<main></main>
