@@ -8,6 +8,11 @@ layout: default
 
 <div class="feature">
     <h2>A customisable music player</h2>
+    <p class="feature-intro">Shape your music player around the way you listen.</p>
+    <div class="feature-actions">
+        <a class="btn btn-primary" href="/download">Download fooyin</a>
+        <a class="btn btn-secondary" href="/screenshots">View screenshots</a>
+    </div>
     <div class="feature-container">
         <img class="img feature-img feature-img-light" src="/assets/images/simple.webp"
             alt="Screenshot of the fooyin simple layout in light mode">
@@ -18,62 +23,51 @@ layout: default
 
 <div class="container-text">
     <h2 class="title">About</h2>
-    <p>fooyin is a music player built around customisation. It provides a variety of widgets to help you manage and play
-        your local collection. It's highly extensible with a plugin system and includes <a
-            href="https://docs.fooyin.org/en/latest/scripting/basics.html">FooScript</a>,
-        a scripting language for advanced configuration of widgets.
-    </p>
-    <p>You can fully customise the user interface by entering a layout editing mode, starting from scratch or using a
-        preset layout.</p>
-    <p>fooyin is developed primarily on Linux, with build support for Linux, macOS, Windows and FreeBSD. Official
-        support for Windows and macOS is coming soon.</p>
-    <h2 class="title">Features</h2>
-    <ul>
-        <li><strong>Playback</strong>
-            <ul>
-                <li>Playback of all major formats, including FLAC, MP3, MP4, Vorbis, Opus, WavPack, WAV, AIFF, MKA,
-                    Musepack and Monkey’s Audio</li>
-                <li>Native support for VGM and tracker/module formats through optional plugins</li>
-                <li>Gapless playback</li>
-                <li>Bit-perfect playback</li>
-                <li>Play files directly from archives</li>
-                <li>Full CUE sheet support (including embedded cues)</li>
-                <li>Internet radio discovery and remote audio stream playback</li>
-                <li>ReplayGain support (including calculation)</li>
-                <li>Configurable fades and crossfades for playback transitions</li>
-                <li>DSP chains with built-in and plugin-provided DSPs</li>
-                <li>Waveform seekbar, spectrum and other visualisations</li>
-                <li>Flexible audio output and device configuration</li>
-            </ul>
-        </li>
-        <li><strong>Library, Playlists & Metadata</strong>
-            <ul>
-                <li>Advanced filtering and search across library and playlist data</li>
-                <li>Standard playlists, dynamic autoplaylists and a playback queue</li>
-                <li>Import/export playlists (M3U/M3U8)</li>
-                <li>Library tree and directory browser views</li>
-                <li>Built-in tag editor and metadata management tools</li>
-                <li>Artwork embedding, downloading, viewing, exporting and extracting</li>
-            </ul>
-        </li>
-        <li><strong>Widgets, Scripting & Customisation</strong>
-            <ul>
-                <li>Fully customisable interface from a blank canvas or preset layouts</li>
-                <li>Lyrics search, editing, syncing and display</li>
-                <li>FooScript for advanced formatting, display logic, queries and autoplaylists</li>
-                <li>Rich text and script formatting across most widgets and views</li>
-                <li>Personalised keyboard shortcuts</li>
-                <li>Extend functionality with a plugin system</li>
-            </ul>
-        </li>
-        <li><strong>Integration</strong>
-            <ul>
-                <li>MPRIS support for desktop controls and media keys</li>
-                <li>Scrobbling with Last.fm, Libre.fm, ListenBrainz and custom services</li>
-                <li>Discord Rich Presence</li>
-            </ul>
-        </li>
-    </ul>
+    <p>fooyin is a music player built around customisation. Arrange its widgets into an interface that suits you,
+        manage large local collections and extend it with plugins and <a
+            href="https://docs.fooyin.org/en/latest/scripting/basics.html">FooScript</a>.</p>
+    <p>Developed primarily on Linux, with build support for Linux, macOS, Windows and FreeBSD.</p>
+
+    <section class="home-features" aria-labelledby="home-features-title">
+        <h2 id="home-features-title" class="title">Made for your music</h2>
+        <ul class="feature-highlights">
+            <li>
+                <strong>Customisable interface</strong>
+                <span>Start with a preset or build your own layout from a blank canvas.</span>
+            </li>
+            <li>
+                <strong>Library and playlists</strong>
+                <span>Organise, search and filter large collections with flexible views.</span>
+            </li>
+            <li>
+                <strong>Broad format support</strong>
+                <span>Play major audio formats, archives and embedded or external CUE sheets.</span>
+            </li>
+            <li>
+                <strong>Plugins and FooScript</strong>
+                <span>Extend fooyin and create advanced display logic, queries and autoplaylists.</span>
+            </li>
+            <li>
+                <strong>Rich music tools</strong>
+                <span>Work with lyrics, artwork, tags, ReplayGain and detailed metadata.</span>
+            </li>
+            <li>
+                <strong>Desktop integrations</strong>
+                <span>Use media controls, scrobbling services and Discord Rich Presence.</span>
+            </li>
+        </ul>
+        <p class="section-link"><a href="/features">Explore all features <span aria-hidden="true">→</span></a></p>
+    </section>
+
+    <section class="home-cta">
+        <h2>Ready to try fooyin?</h2>
+        <p>Download fooyin or visit the documentation to learn how to make it yours.</p>
+        <div class="cta-actions">
+            <a class="btn btn-primary" href="/download">Download fooyin</a>
+            <a class="btn btn-secondary external-link" href="https://docs.fooyin.org" target="_blank"
+                rel="noopener noreferrer">Read the docs</a>
+        </div>
+    </section>
 </div>
 
 {% include footer.html %}

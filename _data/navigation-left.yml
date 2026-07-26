@@ -1,5 +1,7 @@
 - link: /
-  name: Overview
+  name: Home
+- link: /features
+  name: Features
 - link: /screenshots
   name: Screenshots
 - link: /download
