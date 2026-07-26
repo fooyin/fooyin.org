@@ -1,21 +1,80 @@
 ---
 permalink: support
 title: "Support | fooyin"
+description: "Find help, report a problem or suggest an improvement to fooyin."
 layout: default
 ---
 
 {% include header.html %}
 
-<div class="container-text">
+<div class="container-text support-page">
     <h2 class="title">Support</h2>
-    <p>
-        Should you have a bug report or a feature request, please submit it to fooyin's
-        <a href="http://github.com/fooyin/fooyin/issues" target="_blank" rel="noopener noreferrer"
-            >GitHub issue tracker</a
-        >.
-    </p>
-    <h3 class="title">Frequently Asked Questions</h3>
-    <p>View the <a href="/faq">FAQ</a>.</p>
+    <p class="support-intro">Find answers, report a problem or suggest an improvement.</p>
+
+    <section class="support-grid" aria-label="Support options">
+        <a class="support-card" href="/faq">
+            <strong>Frequently Asked Questions</strong>
+            <span>Find answers to common questions and known issues.</span>
+            <span class="support-card-action">View the FAQ <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="support-card external-link" href="https://docs.fooyin.org" target="_blank" rel="noopener noreferrer">
+            <strong>Documentation</strong>
+            <span>Read guides for setup, customisation and fooyin’s features.</span>
+            <span class="support-card-action">Read the docs</span>
+        </a>
+        <a
+            class="support-card external-link"
+            href="https://github.com/fooyin/fooyin/issues/new?template=bug_report.md"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <strong>Report a bug</strong>
+            <span>Let us know when something is not working as expected.</span>
+            <span class="support-card-action">Open a bug report</span>
+        </a>
+        <a
+            class="support-card external-link"
+            href="https://github.com/fooyin/fooyin/issues/new?template=feature_request.md"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <strong>Request a feature</strong>
+            <span>Share an idea or suggest an improvement to fooyin.</span>
+            <span class="support-card-action">Suggest an idea</span>
+        </a>
+    </section>
+
+    <section class="bug-reporting">
+        <h3>Reporting a bug</h3>
+        <p>Before opening an issue, search for an existing report and gather:</p>
+        <ul>
+            <li>Your fooyin version</li>
+            <li>Your operating system and distribution</li>
+            <li>Clear steps that reproduce the problem</li>
+            <li>Relevant logs, screenshots or sample files</li>
+        </ul>
+        <a
+            class="btn btn-primary external-link"
+            href="https://github.com/fooyin/fooyin/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open the issue tracker</a
+        >
+    </section>
+
+    <aside class="community-support">
+        <div>
+            <h3>Still need help?</h3>
+            <p>Ask the community if your question is not covered by the FAQ or documentation.</p>
+        </div>
+        <a
+            class="btn btn-secondary external-link"
+            href="https://github.com/fooyin/fooyin/discussions/categories/q-a"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit Q&amp;A discussions</a
+        >
+    </aside>
 </div>
 
 {% include footer.html %}

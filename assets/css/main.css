@@ -722,6 +722,119 @@ nav.footer-nav a:hover {
     }
 }
 
+/* Support page */
+
+.support-page {
+    max-width: 880px;
+    padding-top: 20px;
+}
+
+.support-intro {
+    font-size: 1.05em;
+    margin-bottom: 24px;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.support-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--surface-border-color);
+    border-radius: 10px;
+    color: var(--base-color-text);
+    min-height: 178px;
+    padding: 24px;
+    text-decoration: none;
+}
+
+.support-card.external-link {
+    padding-right: 50px;
+}
+
+.support-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.support-card.external-link::after {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.support-card strong {
+    color: var(--base-color-text-title);
+    font-family: var(--header-font-family);
+    font-size: 1.1em;
+}
+
+.support-card > span:not(.support-card-action) {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.support-card-action {
+    color: var(--link-color);
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.bug-reporting {
+    margin-top: 42px;
+}
+
+.bug-reporting h3 {
+    margin-bottom: 8px;
+}
+
+.bug-reporting p {
+    margin-top: 0;
+}
+
+.bug-reporting ul {
+    margin-bottom: 24px;
+    padding-left: 1.3em;
+}
+
+.community-support {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 32px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--surface-border-color);
+    border-radius: 10px;
+    margin-top: 42px;
+    padding: clamp(24px, 5vw, 34px);
+}
+
+.community-support h3 {
+    margin: 0 0 6px;
+}
+
+.community-support p {
+    margin: 0;
+}
+
+@media (max-width: 650px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-support {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 .image-grid {
     list-style: none;
     display: grid;
@@ -911,7 +1024,8 @@ body.home header {
     footer,
     .theme-toggle,
     .btn,
-    .funding-option {
+    .funding-option,
+    .support-card {
         transition:
             background-color 180ms ease,
             color 180ms ease,
