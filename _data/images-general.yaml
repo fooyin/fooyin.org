@@ -1,6 +1,12 @@
-title: "General"
+title: "Tools and dialogs"
 images:
-  - src: "/assets/images/tageditor.webp"
-    caption: "Properties/Tag Editor"
-  - src: "/assets/images/scripteditor.webp"
-    caption: "Script Editor"
+    - src: "/assets/images/tageditor.webp"
+      caption: "Properties/Tag Editor"
+      description: "View and edit detailed track metadata."
+      width: 696
+      height: 736
+    - src: "/assets/images/scripteditor.webp"
+      caption: "Script Editor"
+      description: "Write and test FooScript."
+      width: 809
+      height: 572
