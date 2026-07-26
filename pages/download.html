@@ -1,22 +1,71 @@
 ---
 permalink: download
 title: "Download | fooyin"
+description: "Download fooyin for Linux from Flathub, your distribution or source."
 layout: default
 ---
 
 {% include header.html %}
 
-<div class="container-text">
-    <h2 class="title">Download</h2>
-    <h3 class="title">Linux</h3>
-    <p>fooyin is available on the Flathub store:
-    </p>
-    <a href="https://flathub.org/apps/details/org.fooyin.fooyin" target="_blank" rel="noopener noreferrer">
-        <img alt="Download on Flathub" height="70" src="https://flathub.org/assets/badges/flathub-badge-en.png"></a>
-    <p>It can also be found in several distro repositories:
-    </p>
-    <a href="https://repology.org/project/fooyin/versions">
-    <img src="https://repology.org/badge/vertical-allrepos/fooyin.svg" alt="Packaging status"></a>
+<div class="container-text download-page">
+  <h2 class="title">Download</h2>
+  <p class="download-intro">fooyin is available through several Linux distribution repositories and Flathub.</p>
+
+  <section class="download-card download-featured">
+    <div class="download-card-heading">
+      <h3>Flathub</h3>
+      <span class="download-label">Widely available</span>
+    </div>
+    <p>Flathub is currently the most convenient option on distributions without an up-to-date native package.</p>
+    <a
+      class="btn btn-primary external-link"
+      href="https://flathub.org/apps/details/org.fooyin.fooyin"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Install from Flathub</a
+    >
+  </section>
+
+  <section class="other-downloads" aria-labelledby="other-downloads-title">
+    <h3 id="other-downloads-title">Other installation options</h3>
+    <div class="download-grid">
+      <div class="download-card">
+        <h4>Distribution packages</h4>
+        <p>Check whether an up-to-date native package is available for your Linux distribution.</p>
+        <a
+          class="text-link external-link"
+          href="https://repology.org/project/fooyin/versions"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View packages on Repology</a
+        >
+      </div>
+
+      <div class="download-card">
+        <h4>Build from source</h4>
+        <p>Compile fooyin yourself using the dependency list and build instructions in the repository.</p>
+        <a
+          class="text-link external-link"
+          href="https://github.com/fooyin/fooyin/blob/master/BUILD.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Read the build guide</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="download-next">
+    <h3>New to fooyin?</h3>
+    <p>Visit the quick-start guide to add your music and begin customising your layout.</p>
+    <a
+      class="btn btn-secondary external-link"
+      href="https://docs.fooyin.org/en/latest/quick-start/quick-start.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Read the quick-start guide</a
+    >
+  </section>
 </div>
 
 {% include footer.html %}
