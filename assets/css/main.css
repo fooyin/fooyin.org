@@ -18,6 +18,8 @@
   --footer-background-color: var(--navbar-background-color);
 
   --button-background-color: hsl(0, 0%, 100%);
+  --surface-color: hsl(0, 0%, 100%, 0.7);
+  --surface-border-color: hsl(201.6, 32%, 73%);
   --icon-filter: none;
   --focus-color: hsl(201.6, 65%, 35%);
   --home-header-background: hsla(210, 9%, 60%, 0.15);
@@ -45,6 +47,8 @@
   --footer-color: var(--base-color-text);
   --footer-background-color: var(--navbar-background-color);
   --button-background-color: hsl(210, 5%, 21%);
+  --surface-color: hsl(210, 9%, 25%);
+  --surface-border-color: hsl(201.6, 28%, 43%);
   --link-color: hsl(201.6, 62%, 72%);
   --icon-filter: invert(100%);
   --focus-color: hsl(201.6, 70%, 72%);
@@ -70,6 +74,8 @@
     --footer-color: var(--base-color-text);
     --footer-background-color: var(--navbar-background-color);
     --button-background-color: hsl(210, 5%, 21%);
+    --surface-color: hsl(210, 9%, 25%);
+    --surface-border-color: hsl(201.6, 28%, 43%);
     --link-color: hsl(201.6, 62%, 72%);
     --icon-filter: invert(100%);
     --focus-color: hsl(201.6, 70%, 72%);
@@ -510,6 +516,101 @@ footer {
   display: inline-block;
   padding: 16px;
   min-width: 46px;
+}
+
+.donate-page {
+  max-width: 880px;
+  padding-top: 48px;
+}
+
+.donate-hero {
+  background-color: var(--surface-color);
+  border: 1px solid var(--surface-border-color);
+  border-radius: 12px;
+  box-shadow: var(--base-shadow);
+  padding: clamp(28px, 6vw, 52px);
+  text-align: center;
+}
+
+.donate-hero h2 {
+  margin: 0 0 12px;
+}
+
+.donate-hero p {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.funding-options h3 {
+  margin: 32px 0 14px;
+}
+
+.funding-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.funding-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 102px;
+  justify-content: center;
+  background-color: var(--button-background-color);
+  border: 1px solid var(--surface-border-color);
+  border-radius: 8px;
+  box-shadow: var(--base-shadow);
+  padding: 20px 44px 20px 22px;
+  text-decoration: none;
+}
+
+.funding-option:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.funding-option strong {
+  font-size: 1.05em;
+}
+
+.funding-option span {
+  color: var(--base-color-text);
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.funding-option.external-link::after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.donate-details {
+  padding: 12px 4px 0;
+}
+
+.donate-details h3 {
+  margin-top: 28px;
+}
+
+.donate-details ul {
+  padding-left: 1.3em;
+}
+
+@media (max-width: 600px) {
+  .donate-page {
+    padding-top: 24px;
+  }
+
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donate-details {
+    padding-inline: 0;
+  }
 }
 
 .image-grid {
