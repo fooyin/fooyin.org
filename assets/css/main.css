@@ -396,7 +396,7 @@ nav li.active > a {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   header {
     height: auto;
   }
@@ -680,7 +680,7 @@ body.home header {
   max-height: 600px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   input#toggle-nav:checked ~ header {
     background-color: var(--navbar-background-color);
   }
