@@ -10,6 +10,15 @@ layout: default
 <div class="container-text download-page">
     <h2 class="title">Download</h2>
     <p class="download-intro">fooyin is available for Linux and Windows.</p>
+    <p class="download-version">
+        Latest release:
+        <a
+            href="https://github.com/fooyin/fooyin/releases/latest"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span>Loading…</span></a
+        >
+    </p>
 
     <div class="download-grid">
         <section class="download-card download-featured">
@@ -35,14 +44,48 @@ layout: default
                 <h3>Windows</h3>
                 <span class="download-label">Recommended</span>
             </div>
-            <p>Download the latest Windows installer or portable package from the GitHub releases page.</p>
-            <a
-                class="btn btn-primary external-link"
-                href="https://github.com/fooyin/fooyin/releases/latest"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Download for Windows</a
-            >
+            <p>Download an installer or portable package for x64 or ARM64.</p>
+            <details class="download-menu">
+                <summary class="btn btn-primary">Download for Windows</summary>
+                <div class="download-menu-options">
+                    <a
+                        class="external-link"
+                        data-windows-asset="-windows-x64.exe"
+                        href="https://github.com/fooyin/fooyin/releases/latest"
+                        hidden
+                        >Installer (x64)</a
+                    >
+                    <a
+                        class="external-link"
+                        data-windows-asset="-windows-x64-portable.zip"
+                        href="https://github.com/fooyin/fooyin/releases/latest"
+                        hidden
+                        >Portable ZIP (x64)</a
+                    >
+                    <hr class="download-menu-separator" hidden />
+                    <a
+                        class="external-link"
+                        data-windows-asset="-windows-arm64.exe"
+                        href="https://github.com/fooyin/fooyin/releases/latest"
+                        hidden
+                        >Installer (ARM64)</a
+                    >
+                    <a
+                        class="external-link"
+                        data-windows-asset="-windows-arm64-portable.zip"
+                        href="https://github.com/fooyin/fooyin/releases/latest"
+                        hidden
+                        >Portable ZIP (ARM64)</a
+                    >
+                    <a
+                        class="external-link download-menu-fallback"
+                        href="https://github.com/fooyin/fooyin/releases/latest"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View Windows downloads on GitHub</a
+                    >
+                </div>
+            </details>
         </section>
     </div>
 
@@ -87,5 +130,7 @@ layout: default
         >
     </section>
 </div>
+
+<script src="/assets/js/downloads.js?v=1" defer></script>
 
 {% include footer.html %}

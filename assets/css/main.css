@@ -548,7 +548,12 @@ nav.footer-nav a:hover {
 
 .download-intro {
     font-size: 1.05em;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
+}
+
+.download-version {
+    font-size: 0.9em;
+    margin: 0 0 24px;
 }
 
 .download-card {
@@ -569,6 +574,14 @@ nav.footer-nav a:hover {
 
 .download-featured {
     border-left: 5px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.download-featured > .btn,
+.download-featured > .download-menu {
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .download-card-heading {
@@ -588,6 +601,79 @@ nav.footer-nav a:hover {
     padding: 5px 10px;
 }
 
+.download-menu {
+    display: inline-block;
+    position: relative;
+}
+
+.download-menu summary {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 9px;
+    list-style: none;
+}
+
+.download-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.download-menu summary::after {
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    content: "";
+    height: 7px;
+    margin-top: -4px;
+    transform: rotate(45deg);
+    transition: transform 0.15s ease;
+    width: 7px;
+}
+
+.download-menu[open] summary::after {
+    margin-top: 4px;
+    transform: rotate(225deg);
+}
+
+.download-menu summary:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 3px;
+}
+
+.download-menu-options {
+    background-color: var(--button-background-color);
+    border: 1px solid var(--surface-border-color);
+    border-radius: 8px;
+    box-shadow: var(--base-shadow);
+    left: 0;
+    margin-top: 7px;
+    min-width: 265px;
+    padding: 6px;
+    position: absolute;
+    z-index: 10;
+}
+
+.download-menu-options a {
+    border-radius: 5px;
+    display: block;
+    font-weight: 700;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.download-menu-options a:hover {
+    background-color: var(--surface-color);
+}
+
+.download-menu-separator {
+    border: 0;
+    border-top: 1px solid var(--surface-border-color);
+    margin: 6px;
+}
+
+.download-menu-options [hidden] {
+    display: none;
+}
+
 .other-downloads {
     margin-top: 38px;
 }
@@ -600,7 +686,7 @@ nav.footer-nav a:hover {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .text-link {
