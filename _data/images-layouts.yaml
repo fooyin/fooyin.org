@@ -15,9 +15,9 @@ images:
       description: "A library-focused layout with artwork and metadata."
       width: 1418
       height: 879
-    - src: "/assets/images/viewer.webp"
-      caption: "Viewer"
-      description: "A waveform-driven playlist and artwork layout."
+    - src: "/assets/images/gallery.webp"
+      caption: "Gallery"
+      description: "An artwork-focused grid for browsing your library."
       width: 1418
       height: 879
     - src: "/assets/images/radio.webp"
