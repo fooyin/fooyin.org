@@ -16,7 +16,7 @@ layout: default
         </p>
     </div>
 
-    {% assign dataFiles = "images-layouts,images-general" | split: ',' %} {% for file in dataFiles %} {% assign
+    {% assign dataFiles = "images-layouts,images-general,images-visualisations" | split: ',' %} {% for file in dataFiles %} {% assign
     imagesData = site.data[file] %} {% assign images = imagesData.images %} {% assign sectionTitle = imagesData.title %}
 
     <section class="screenshot-section" aria-labelledby="screenshots-{{ sectionTitle | slugify }}">

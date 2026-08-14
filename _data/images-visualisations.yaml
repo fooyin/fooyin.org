@@ -1,0 +1,32 @@
+title: "Visualisations"
+images:
+    - src: "/assets/images/spectrum.webp"
+      caption: "Spectrum"
+      description: "A real-time frequency spectrum display."
+      width: 930
+      height: 608
+    - src: "/assets/images/oscilloscope.webp"
+      caption: "Oscilloscope"
+      description: "A real-time view of the audio waveform."
+      width: 930
+      height: 608
+    - src: "/assets/images/spectrogram.webp"
+      caption: "Spectrogram"
+      description: "A scrolling view of frequency content over time."
+      width: 930
+      height: 608
+    - src: "/assets/images/peakmeter.webp"
+      caption: "Peak Meter"
+      description: "Live channel levels and audio peaks."
+      width: 930
+      height: 608
+    - src: "/assets/images/waveformseekbar.webp"
+      caption: "Waveform Seekbar"
+      description: "Navigate the current track using its waveform."
+      width: 930
+      height: 608
+    - src: "/assets/images/projectm.webp"
+      caption: "projectM"
+      description: "MilkDrop-style visualisations powered by projectM."
+      width: 930
+      height: 608
