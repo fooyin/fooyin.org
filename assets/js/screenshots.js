@@ -12,12 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButton = dialog.querySelector(".lightbox-close");
     const previousButton = dialog.querySelector(".lightbox-previous");
     const nextButton = dialog.querySelector(".lightbox-next");
+    const historyStateKey = "screenshotLightbox";
     let currentIndex = 0;
+    let historyEntryActive = false;
 
     const showScreenshot = (index) => {
         currentIndex = (index + links.length) % links.length;
         const link = links[currentIndex];
         const thumbnail = link.querySelector("img");
+
+        if (historyEntryActive) {
+            history.replaceState({ ...history.state, [historyStateKey]: currentIndex }, "");
+        }
 
         if (image) {
             image.src = link.href;
@@ -41,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
             showScreenshot(index);
             dialog.showModal();
             document.documentElement.classList.add("lightbox-open");
+            history.pushState({ ...history.state, [historyStateKey]: index }, "");
+            historyEntryActive = true;
         });
     });
 
@@ -64,10 +72,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    window.addEventListener("popstate", (event) => {
+        const historyIndex = event.state?.[historyStateKey];
+
+        if (Number.isInteger(historyIndex)) {
+            showScreenshot(historyIndex);
+            if (!dialog.open) {
+                dialog.showModal();
+                document.documentElement.classList.add("lightbox-open");
+            }
+            historyEntryActive = true;
+        } else if (dialog.open) {
+            historyEntryActive = false;
+            dialog.close();
+        }
+    });
+
     dialog.addEventListener("close", () => {
         document.documentElement.classList.remove("lightbox-open");
         if (image) {
             image.removeAttribute("src");
+        }
+        if (historyEntryActive) {
+            historyEntryActive = false;
+            history.back();
         }
     });
 });
