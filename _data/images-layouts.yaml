@@ -22,7 +22,7 @@ images:
       height: 879
     - src: "/assets/images/waveform.webp"
       caption: "Waveform"
-      description: "Album playback with artwork, waveform and track list."
+      description: "Album playback with waveform and track list."
       width: 1418
       height: 879
     - src: "/assets/images/radio.webp"
