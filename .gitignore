@@ -7,3 +7,4 @@ vendor
 .vscode/
 .idea/
 .directory
+node_modules/
