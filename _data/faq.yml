@@ -21,3 +21,13 @@
         to add <code>org.freedesktop.Notifications</code> to fooyin's Session Bus “talk” permissions.
         See <a href='https://github.com/fooyin/fooyin/issues/995' target='_blank' rel='noopener noreferrer'>issue #995</a>
         for more details.
+    - question: "Why can't Run Services launch applications from the Flatpak?"
+      answer: |
+        The Flatpak sandbox cannot directly run applications installed on the host. To allow fooyin to launch host applications, use
+        <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>
+        to add <code>org.freedesktop.Flatpak</code> to fooyin's Session Bus "talk" permissions, or run:<br><br>
+        <code>flatpak override --user --talk-name=org.freedesktop.Flatpak org.fooyin.fooyin</code><br><br>
+        Then prefix each service command with <code>flatpak-spawn --host</code>. For example:<br><br>
+        <code>flatpak-spawn --host /usr/bin/spek \"%filepath%\"</code><br><br>
+        This permission allows fooyin to execute arbitrary commands outside the sandbox. Only enable it if you trust
+        your configured services.
