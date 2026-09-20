@@ -12,13 +12,18 @@
       answer: |
         The Flatpak sandbox restricts filesystem access, so fooyin cannot freely read directories outside of its allowed scope.
         To resolve this, you must grant fooyin access to your music directories and any required paths using a tool such as
-        <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>.
+        <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>,
+        or run the following command after replacing the example path:<br><br>
+        <code>flatpak override --user --filesystem="/path/to/music" org.fooyin.fooyin</code><br><br>
+        Restart fooyin after changing its permissions.
     - question: "Why are the notification timeout and album art options disabled in the Flatpak?"
       answer: |
         The Flatpak uses the desktop notification portal by default, which does not support custom timeouts or album art.
         To enable these options, use
         <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>
-        to add <code>org.freedesktop.Notifications</code> to fooyin's Session Bus “talk” permissions.
+        to add <code>org.freedesktop.Notifications</code> to fooyin's Session Bus “talk” permissions, or run:<br><br>
+        <code>flatpak override --user --talk-name=org.freedesktop.Notifications org.fooyin.fooyin</code><br><br>
+        Restart fooyin after changing its permissions.
         See <a href='https://github.com/fooyin/fooyin/issues/995' target='_blank' rel='noopener noreferrer'>issue #995</a>
         for more details.
     - question: "Why can't Run Services launch applications from the Flatpak?"
