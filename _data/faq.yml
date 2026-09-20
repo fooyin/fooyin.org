@@ -11,9 +11,10 @@
     - question: "Why can't fooyin read a directory or why does it fail to find a previously added directory on restart?"
       answer: |
         The Flatpak sandbox restricts filesystem access, so fooyin cannot freely read directories outside of its allowed scope.
-        To resolve this, you must grant fooyin access to your music directories and any required paths using a tool such as
-        <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>,
-        or run the following command after replacing the example path:<br><br>
+        Common music locations are already permitted. If a directory is missing from the directory picker, cannot be read, or a
+        library becomes unavailable after restarting fooyin, grant access to that directory using a tool such as
+        <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank'
+        rel='noopener noreferrer'>Flatseal</a>, or run the following command after replacing the example path:<br><br>
         <code>flatpak override --user --filesystem="/path/to/music" org.fooyin.fooyin</code><br><br>
         Restart fooyin after changing its permissions.
     - question: "Why are the notification timeout and album art options disabled in the Flatpak?"
