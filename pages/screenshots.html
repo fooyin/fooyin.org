@@ -4,7 +4,6 @@ title: "Screenshots | fooyin"
 description: "Explore fooyin layouts, tools and interface customisation."
 layout: default
 ---
-
 {% include header.html %}
 
 <div class="container screenshots-page">
@@ -16,39 +15,42 @@ layout: default
         </p>
     </div>
 
-    {% assign dataFiles = "images-layouts,images-general,images-visualisations" | split: ',' %} {% for file in dataFiles %} {% assign
-    imagesData = site.data[file] %} {% assign images = imagesData.images %} {% assign sectionTitle = imagesData.title %}
+    {% assign dataFiles = 'images-layouts,images-general,images-visualisations' | split: ',' %}
+    {% for file in dataFiles %}
+        {% assign imagesData = site.data[file] %}
+        {% assign images = imagesData.images %}
+        {% assign sectionTitle = imagesData.title %}
 
-    <section class="screenshot-section" aria-labelledby="screenshots-{{ sectionTitle | slugify }}">
-        <h3 id="screenshots-{{ sectionTitle | slugify }}">{{ sectionTitle }}</h3>
-        <ul class="image-grid">
-            {% for image in images %}
-            <li>
-                <a
-                    class="screenshot-card"
-                    href="{{ image.src }}"
-                    data-caption="{{ image.caption | escape }}"
-                    data-description="{{ image.description | escape }}"
-                    aria-haspopup="dialog"
-                >
-                    <span class="screenshot-frame">
-                        <img
-                            src="{{ image.src }}"
-                            width="{{ image.width }}"
-                            height="{{ image.height }}"
-                            alt="{{ image.caption }} — {{ image.description }}"
-                            loading="lazy"
-                        />
-                    </span>
-                    <span class="screenshot-copy">
-                        <strong>{{ image.caption }}</strong>
-                        <span>{{ image.description }}</span>
-                    </span>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
+        <section class="screenshot-section" aria-labelledby="screenshots-{{ sectionTitle | slugify }}">
+            <h3 id="screenshots-{{ sectionTitle | slugify }}">{{ sectionTitle }}</h3>
+            <ul class="image-grid">
+                {% for image in images %}
+                    <li>
+                        <a
+                            class="screenshot-card"
+                            href="{{ image.src }}"
+                            data-caption="{{ image.caption | escape }}"
+                            data-description="{{ image.description | escape }}"
+                            aria-haspopup="dialog"
+                        >
+                            <span class="screenshot-frame">
+                                <img
+                                    src="{{ image.src }}"
+                                    width="{{ image.width }}"
+                                    height="{{ image.height }}"
+                                    alt="{{ image.caption }} — {{ image.description }}"
+                                    loading="lazy"
+                                />
+                            </span>
+                            <span class="screenshot-copy">
+                                <strong>{{ image.caption }}</strong>
+                                <span>{{ image.description }}</span>
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
     {% endfor %}
 
     <section class="screenshots-cta">

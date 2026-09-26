@@ -3,8 +3,8 @@
     <div class="container flex align-center">
         <div id="nav-container">
             <a href="/" id="logo">
-                <img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="fooyin" />
-                <img class="nav-logo dark-logo" src="/assets/logo-dark.svg" width="136" height="48" alt="fooyin" />
+                <img class="nav-logo" src="/assets/logo.svg?v=5" width="158" height="48" alt="fooyin" />
+                <img class="nav-logo dark-logo" src="/assets/logo-dark.svg?v=5" width="158" height="48" alt="fooyin" />
             </a>
             <label for="toggle-nav" id="toggle-nav-btn">
                 <img src="/assets/icons/menu.svg" width="24" height="24" alt="Main menu" />
@@ -13,28 +13,42 @@
 
         <nav id="nav">
             <ul>
-                {% for item in site.data.navigation-left %} {% if item.link == page.url %}
-                <li class="active">{% else %}</li>
-
-                <li>
+                {% for item in site.data['navigation-left'] %}
+                    {% assign item_is_active = false %}
+                    {% if item.link == page.url %}
+                        {% assign item_is_active = true %}
+                    {% elsif item.link == '/blog' and page.layout == 'post' %}
+                        {% assign item_is_active = true %}
                     {% endif %}
-                    <a href="{{ item.link }}">{{ item.name }}</a>
-                </li>
+
+                    {% if item_is_active %}
+                        <li class="active">
+                            <a href="{{ item.link }}" aria-current="page">{{ item.name }}</a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ item.link }}">{{ item.name }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
             <ul>
-                {% for item in site.data.navigation-right %} {% if item.link == page.url %}
-                <li class="active">{% else %}</li>
-
-                <li>
-                    {% endif %} {% if item.external %}
-                    <a href="{{ item.link }}" class="external-link" target="_blank" rel="noopener noreferrer"
-                        >{{ item.name }}</a
-                    >
+                {% for item in site.data['navigation-right'] %}
+                    {% if item.external %}
+                        <li>
+                            <a href="{{ item.link }}" class="external-link" target="_blank" rel="noopener noreferrer">
+                                {{- item.name -}}
+                            </a>
+                        </li>
+                    {% elsif item.link == page.url %}
+                        <li class="active">
+                            <a href="{{ item.link }}" aria-current="page">{{ item.name }}</a>
+                        </li>
                     {% else %}
-                    <a href="{{ item.link }}">{{ item.name }}</a>
+                        <li>
+                            <a href="{{ item.link }}">{{ item.name }}</a>
+                        </li>
                     {% endif %}
-                </li>
                 {% endfor %}
                 <li class="theme-item">
                     <button
