@@ -25,7 +25,7 @@ git clone https://github.com/fooyin/fooyin.org.git
 cd fooyin.org
 ```
 
-Install the project's Ruby dependencies:
+Install the project’s Ruby dependencies:
 
 ```bash
 bundle config set --local path vendor/bundle

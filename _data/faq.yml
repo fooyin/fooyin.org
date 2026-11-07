@@ -1,14 +1,14 @@
 - title: "General"
   questions:
-    - question: "Why 'fooyin'?"
+    - question: "Why ‘fooyin’?"
       answer:
-        "The name is based on 'foo' from foobar and the chinese 音 (yīn), meaning 'sound'.
-        It's also a play on 福音 (fúyīn), meaning 'good news'."
-    - question: "Why doesn't fooyin use my system theme?"
+        "The name is based on ‘foo’ from foobar and the chinese 音 (yīn), meaning ‘sound’.
+        It’s also a play on 福音 (fúyīn), meaning ‘good news’."
+    - question: "Why doesn’t fooyin use my system theme?"
       answer: "As fooyin is built using Qt6, it will follow the system Qt style.
-      If you're using a non-Qt DE such as GNOME or Cinnamon, you will need to install something like
+      If you’re using a non-Qt DE such as GNOME or Cinnamon, you will need to install something like
       <a href='https://github.com/trialuser02/qt6ct' target='_blank' rel='noopener noreferrer'>qt6ct</a>."
-    - question: "Why can't fooyin read a directory or why does it fail to find a previously added directory on restart?"
+    - question: "Why can’t fooyin read a directory or why does it fail to find a previously added directory on restart?"
       answer: |
         The Flatpak sandbox restricts filesystem access, so fooyin cannot freely read directories outside of its allowed scope.
         Common music locations are already permitted. If a directory is missing from the directory picker, cannot be read, or a
@@ -22,16 +22,16 @@
         The Flatpak uses the desktop notification portal by default, which does not support custom timeouts or album art.
         To enable these options, use
         <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>
-        to add <code>org.freedesktop.Notifications</code> to fooyin's Session Bus “talk” permissions, or run:<br><br>
+        to add <code>org.freedesktop.Notifications</code> to fooyin’s Session Bus ‘talk’ permissions, or run:<br><br>
         <code>flatpak override --user --talk-name=org.freedesktop.Notifications org.fooyin.fooyin</code><br><br>
         Restart fooyin after changing its permissions.
         See <a href='https://github.com/fooyin/fooyin/issues/995' target='_blank' rel='noopener noreferrer'>issue #995</a>
         for more details.
-    - question: "Why can't Run Services launch applications from the Flatpak?"
+    - question: "Why can’t Run Services launch applications from the Flatpak?"
       answer: |
         The Flatpak sandbox cannot directly run applications installed on the host. To allow fooyin to launch host applications, use
         <a href='https://flathub.org/apps/com.github.tchx84.Flatseal' target='_blank' rel='noopener noreferrer'>Flatseal</a>
-        to add <code>org.freedesktop.Flatpak</code> to fooyin's Session Bus "talk" permissions, or run:<br><br>
+        to add <code>org.freedesktop.Flatpak</code> to fooyin’s Session Bus ‘talk’ permissions, or run:<br><br>
         <code>flatpak override --user --talk-name=org.freedesktop.Flatpak org.fooyin.fooyin</code><br><br>
         Then prefix each service command with <code>flatpak-spawn --host</code>. For example:<br><br>
         <code>flatpak-spawn --host /usr/bin/spek \"%filepath%\"</code><br><br>
