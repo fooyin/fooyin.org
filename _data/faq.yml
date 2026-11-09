@@ -2,7 +2,7 @@
   questions:
     - question: "Why ‘fooyin’?"
       answer:
-        "The name is based on ‘foo’ from foobar and the chinese 音 (yīn), meaning ‘sound’.
+        "The name is based on ‘foo’ from foobar and the Chinese 音 (yīn), meaning ‘sound’.
         It’s also a play on 福音 (fúyīn), meaning ‘good news’."
     - question: "Why doesn’t fooyin use my system theme?"
       answer: "As fooyin is built using Qt6, it will follow the system Qt style.
@@ -35,5 +35,5 @@
         <code>flatpak override --user --talk-name=org.freedesktop.Flatpak org.fooyin.fooyin</code><br><br>
         Then prefix each service command with <code>flatpak-spawn --host</code>. For example:<br><br>
         <code>flatpak-spawn --host /usr/bin/spek \"%filepath%\"</code><br><br>
-        This permission allows fooyin to execute arbitrary commands outside the sandbox. Only enable it if you trust
+        This permission allows fooyin to run arbitrary commands outside the sandbox. Only enable it if you trust
         your configured services.
